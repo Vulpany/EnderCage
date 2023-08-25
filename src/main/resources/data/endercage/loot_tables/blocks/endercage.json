@@ -1,0 +1,38 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "endercage:endercage"
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "functions": [
+        {
+          "function": "minecraft:copy_nbt",
+          "source": "block_entity",
+          "ops": [
+            {
+              "source": "containedentity",
+              "target": "BlockEntityTag.containedentity",
+              "op": "replace"
+            },
+            {
+              "source": "Silent",
+              "target": "BlockEntityTag.Silent",
+              "op": "replace"
+            }
+          ]
+        }
+      ]
+
+    }
+  ]
+}

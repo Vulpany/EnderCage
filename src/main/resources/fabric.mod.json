@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "id": "endercage",
+  "version": "${version}",
+  "name": "endercage",
+  "description": "Capturing Entities",
+  "authors": ["Vulpry"],
+  "contact": {
+    "repo": "https://github.com/Vulpany/EnderCage.git"
+  },
+  "license": "All-Rights-Reserved",
+  "icon": "assets/entity_capturing_tool/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "com.pany.mods.entity_capturing_tool.client.EntityCapturingToolClient"
+    ],
+    "main": [
+      "com.pany.mods.entity_capturing_tool.EntityCapturingTool"
+    ]
+  },
+  "mixins": [
+    "entity_capturing_tool.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  },
+  "custom": {
+    "loom:injected_interfaces": {
+      "net/minecraft/class_1308" : ["com/pany/mods/entity_capturing_tool/injectedinterfaces/soundgetting"],
+      "net/minecraft/server/MinecraftServer" : ["com/pany/mods/entity_capturing_tool/injectedinterfaces/confighandling"],
+      "net/minecraft/class_918": ["com/pany/mods/entity_capturing_tool/injectedinterfaces/itemrendering"],
+      "net/minecraft/class_1799": ["com/pany/mods/entity_capturing_tool/injectedinterfaces/itemstackcontainedobject"]
+    }
+  }
+}
