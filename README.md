@@ -19,9 +19,9 @@ Features:
 
 -> If a cage is powered it will:
 
---> Release the containe entity / capture the entity above if the block above is air.
+-->> Release the contained entity / capture the entity above if the block above is air.
 
---> Steal from/give the contained entity to a cage above.
+-->> Steal from/give the contained entity to a cage above.
 
 ->  Noteblocks above cages will always play the ambient of the entity below, even if the cage is muted.
 
